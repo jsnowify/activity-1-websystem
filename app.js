@@ -113,7 +113,7 @@ transitionTl
     ease: "power1.inOut",
     onUpdate: () => {
       context.clearRect(0, 0, canvas.width, canvas.height);
-      context.fillStyle = "#f7f7f7";
+      context.fillStyle = "#f7f7f7"; // Match the light background
       const centerX = canvas.width / 2;
       const centerY = canvas.height / 2;
       context.fillRect(
@@ -165,9 +165,9 @@ skillItems.forEach((item) => {
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
     gsap.to(item, {
-      x: (x - rect.width / 2) * 0.9,
-      y: (y - rect.height / 2) * 0.9,
-      duration: 0.2,
+      x: (x - rect.width / 2) * 0.7,
+      y: (y - rect.height / 2) * 0.7,
+      duration: 0.8,
       ease: "power3.out",
     });
   });
@@ -175,7 +175,7 @@ skillItems.forEach((item) => {
     gsap.to(item, {
       x: 0,
       y: 0,
-      duration: 0.2,
+      duration: 0.8,
       ease: "elastic.out(1, 0.3)",
     });
   });
